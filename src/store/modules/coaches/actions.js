@@ -31,7 +31,7 @@ export const actions = {
   },
   async loadCoaches(context) {
     const response = await fetch(
-      `https://vue-http-demo-d471c-default-rtdb.firebaseio.com/coaches`
+      `https://vue-http-demo-d471c-default-rtdb.firebaseio.com/coaches.json`
     );
 
     const responseData = await response.json();
