@@ -63,13 +63,15 @@ export default {
 
       this.isLoading = true;
 
+      const actionPayload = {
+        email: this.email,
+        password: this.password,
+      };
+
       try {
         this.mode === "login"
-          ? this.$store.dispatch("login")
-          : await this.$store.dispatch("signup", {
-              email: this.email,
-              password: this.password,
-            });
+          ? this.$store.dispatch("login", actionPayload)
+          : await this.$store.dispatch("signup", actionPayload);
       } catch (err) {
         this.error =
           err.message ||
