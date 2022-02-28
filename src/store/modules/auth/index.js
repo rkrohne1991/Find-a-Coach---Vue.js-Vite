@@ -4,7 +4,7 @@ import { getters } from "./getters";
 
 const authModule = {
   state() {
-    return { userId: "c3" };
+    return { token: null, userId: null, tokenExpiration: null };
   },
   mutations,
   actions,
