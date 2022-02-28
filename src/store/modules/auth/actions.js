@@ -17,7 +17,7 @@ export const actions = {
     if (!response.ok) {
       console.log(responseData);
       const error = new Error(
-        responseData.message || "Failed to authenticate!"
+        responseData.message || "Failed to authenticate. Check your login data."
       );
       throw error;
     }
@@ -58,5 +58,12 @@ export const actions = {
       userId: responseData.localId,
       tokenExpiration: responseData.expiresIn,
     });
+  },
+  logout(context) {
+    // context.commit("setUser", {
+    //   token: null,
+    //   userId: null,
+    //   tokenExpiration: null,
+    // });
   },
 };
