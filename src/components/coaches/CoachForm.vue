@@ -38,7 +38,7 @@
         v-model.number="rate.val"
         @blur="clearValidity('rate')"
       />
-      <p v-if="!rate.isValid">Rate must greater than 0.</p>
+      <p v-if="!rate.isValid">Rate must be greater than 0.</p>
     </div>
     <div class="form-control" :class="{ invalid: !areas.isValid }">
       <h3>Areas of Expertise</h3>
@@ -75,7 +75,7 @@
       <p v-if="!areas.isValid">At least one expertise must be selected.</p>
     </div>
     <p v-if="!formIsValid">Please fix the above errors and submit again.</p>
-    <base-button type="submit">Register</base-button>
+    <base-button>Register</base-button>
   </form>
 </template>
 

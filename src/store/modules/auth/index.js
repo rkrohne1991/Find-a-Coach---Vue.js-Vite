@@ -7,7 +7,7 @@ const authModule = {
     return {
       userId: null,
       token: null,
-      tokenExpiration: null,
+      didAutoLogout: false,
     };
   },
   mutations,
