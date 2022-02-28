@@ -1,5 +1,1 @@
-export const getters = {
-  userId(state) {
-    return state.userId;
-  },
-};
+export const getters = {};

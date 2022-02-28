@@ -6,14 +6,13 @@ import { getters } from "./getters";
 
 import coachesModule from "./modules/coaches";
 import requestsModule from "./modules/requests";
+import authModule from "./modules/auth";
 
 const store = createStore({
   modules: {
     coaches: coachesModule,
     requests: requestsModule,
-  },
-  state() {
-    return { userId: "c3" };
+    auth: authModule,
   },
   mutations,
   actions,
